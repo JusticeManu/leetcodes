@@ -140,13 +140,20 @@ public class App   {
 //		System.out.println( findMissingNumber(array)  );
 //		System.out.println(isPermutation(array,array1));
 		
-		SingleLinkList list=new SingleLinkList();
-		list.createSingleLinkedList(5);
-		list.linkedList(3, 1);
-		list.linkedList(8, 3);
-		list.linkedList(5, 2);
-
-	     list.transversal();
+//		SingleLinkList list=new SingleLinkList();
+//		list.createSingleLinkedList(5);
+//		list.linkedList(3, 1);
+//		list.linkedList(8, 3);
+//		list.linkedList(5, 2);
+//
+//	     list.transversal();
+		float x=2.1234F;
+		float y=3.1234F;
+		double x1=2.1234;
+		double y1=3.1234;
+		
+		
+		
 
 	}
 

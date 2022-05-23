@@ -1,16 +1,58 @@
 package Arrays;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.HashSet;
 import java.util.List;
 
 public class Leetcode {
 
+//	
+//	Date d = new Date();
+//	GregorianCalendar cal = new GregorianCalendar();
+//	cal.setTime(d);
+	
+	Calendar c=new GregorianCalendar();
+	 //BEST TIME TO BUY AND SELL STOCK (LeetCode)
+	public int bestTimeToBuy(int[] prices) {
+		int maxProfit=0;
+		int minValue=Integer.MAX_VALUE;
+		
+		for(int i=0;i<prices.length;i++) {
+			
+			if(prices[i] < minValue) {
+				
+				minValue=prices[i];
+			} else if(prices[i]-minValue > maxProfit ) {
+				
+				maxProfit=prices[i]-minValue;
+			}
+		}
+		
+		return maxProfit;
+		
+		
+	}
 	
 	
-	///leettcode problem . find the number of island 
 	
+	
+	public static final String DATE_PATTERN="mm/dd/yyyy";
+	public static LocalDate dateTimeForString(String date) {
+		
+		return LocalDate.parse(date, DateTimeFormatter.ofPattern(DATE_PATTERN));
+	}
+	
+	public static String localDateAsString(LocalDate date) {
+		
+		return date.format(DateTimeFormatter.ofPattern(DATE_PATTERN));
+	}
 	
 	public static int isIland(char[][] grip) {
 		
@@ -78,18 +120,10 @@ public class Leetcode {
 		 return false;
 		 
 		 
-//		 HashSet<Integer> numbers=new HashSet<>();
-//				 
-//				 for(int i=0;i<arr.length ; i++) {
-//					 
-//					 if(numbers.contains(arr[i])); return true;
-//					 
-//					 numbers.add(arr[i]);
-//				 }
-//		 return false;
 	 }
 	 
-	 //other alternative
-	 
+
+
+	
 
 }
